@@ -1,30 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Setup
+First, let’s make sure that your development environment is ready.
 
-## Getting Started
+If you don’t have Node.js installed, install it from here. You’ll need Node.js version 10.13 or later.
+You’ll be using your own text editor and terminal app for this tutorial.
+If you are on Windows, we recommend downloading Git for Windows and use Git Bash that comes with it, which supports the UNIX-specific commands in this tutorial.
 
-First, run the development server:
+##Create a Next.js app
+To create a Next.js app, open your terminal, cd into the directory you’d like to create the app in, and run the following command:
 
 ```bash
-npm run dev
-# or
-yarn dev
+npx create-next-app ssr-workshop --use-npm --setup "https://gitlab.com/tikalk.com/react-ssr-workshop.git"
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Under the hood, this uses the tool called create-next-app, which bootstraps a Next.js app for you. It uses this template through the --example flag.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Run the development server
+You now have a new directory called nextjs-blog. Let’s cd into it:
 
-## Learn More
+```bash
+cd ssr-workshop
+```
+Then, run the following command:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+yarn dev
+```
+This starts your Next.js app’s "development server" (more on this later) on port 3000.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Let’s check to see if it’s working. Open http://localhost:3000 from your browser.
