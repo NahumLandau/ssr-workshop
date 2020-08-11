@@ -12,7 +12,7 @@ To create a Next.js app, open your terminal, cd into the directory you’d like 
 npx create-next-app ssr-workshop --use-npm --setup "https://gitlab.com/tikalk.com/react-ssr-workshop.git"
 ```
 
-Under the hood, this uses the tool called create-next-app, which bootstraps a Next.js app for you. It uses this template through the --example flag.
+Under the hood, this uses the tool called create-next-app, which bootstraps a Next.js app for you. It uses this template through the --setup flag.
 
 ## Run the development server
 You now have a new directory called nextjs-blog. Let’s cd into it:
