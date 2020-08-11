@@ -6,7 +6,7 @@ If you’re NOT continuing from the previous lesson, you can download, install, 
 Again, this is NOT necessary if you’ve just finished the previous lesson.
 
 ```bash
-npx create-next-app ssr-workshop --use-npm --example "https://gitlab.com/tikalk.com/react-ssr-workshop/-/tree/adding-dependencies"
+npx create-next-app ssr-workshop --use-npm --example "https://gitlab.com/tikalk.com/react-ssr-workshop/-/tree/01-adding-dependencies"
 ```
 
 You now have a new directory called `ssr-workshop`. Let’s cd into it:
