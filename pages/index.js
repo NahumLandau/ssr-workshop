@@ -7,6 +7,7 @@ import CardHeader from 'reactstrap/lib/CardHeader'
 import CardBody from 'reactstrap/lib/CardBody'
 import Layout from "../components/Layout";
 import Head from "next/head";
+import Link from 'next/link';
 import {getsTVShows} from "../services/api";
 
 const Index = ({shows}) =>
@@ -25,7 +26,9 @@ const Index = ({shows}) =>
                 {shows.map(show => <Col md={4} key={show.id} className="mb-4">
                     <Card>
                         <CardHeader>
-                            <h4>{show._embedded.show.name}</h4>
+                            <Link href={`shows/[show]`} as={`shows/${show._embedded.show.id}`}>
+                                <a>{show._embedded.show.name}</a>
+                            </Link>
                         </CardHeader>
                         <CardBody>
                             <img src={show._embedded.show.image?.medium}
@@ -42,7 +45,7 @@ const Index = ({shows}) =>
 
 export default Index;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const shows = await getsTVShows()
     return {
         props: {
