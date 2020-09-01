@@ -5,6 +5,7 @@ import Row from 'reactstrap/lib/Row'
 import Col from 'reactstrap/lib/Col'
 import Nav from 'reactstrap/lib/Nav'
 import NavItem from 'reactstrap/lib/Nav'
+import ShoppingCart from './ShoppingCart';
 
 const Layout = ({children}) => <>
     <header className="bg-light py-3">
@@ -17,12 +18,15 @@ const Layout = ({children}) => <>
                             alt="Tikal Workshop"/></div>
                     </Link>
                 </Col>
-                <Col md={9}>
+                <Col md={3}>
                     <Nav>
                         <NavItem>
                             <Link href="/about">About</Link>
                         </NavItem>
                     </Nav>
+                </Col>
+                <Col md={6}>
+                    <ShoppingCart/>
                 </Col>
             </Row>
         </Container>

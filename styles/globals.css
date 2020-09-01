@@ -14,3 +14,27 @@ a {
 * {
   box-sizing: border-box;
 }
+.shopping-cart ul{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  position: absolute;
+  z-index: 9999;
+  width: 300px;
+  box-shadow: 1px 1px 4px 2px #0000004f;
+}
+.shopping-cart li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid gray;
+}
+.shopping-cart li h5 {
+  font-size: 12px;
+}
+
+.shopping-cart li img {
+  width: 40px;
+  margin-right: 10px;
+}

@@ -9,7 +9,6 @@ import Layout from "../components/Layout";
 import Head from "next/head";
 import Link from 'next/link';
 import {getsTVShows} from "../services/api";
-import { wrapper } from '../store';
 
 const Index = ({shows}) => {
 
@@ -49,13 +48,11 @@ const Index = ({shows}) => {
 
 export default Index;
 
-export const getServerSideProps = wrapper.getServerSideProps(async() =>{
-    
+export async function getServerSideProps(){
     const shows = await getsTVShows()
     return {
         props: {
             shows
         }
     }
-    
-}) 
+}

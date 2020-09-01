@@ -9,7 +9,7 @@ const ShowPage = ({show}) => {
     return <Error statusCode='404' />
   }
   
-  const { name, image, summary } = show;
+  const { name, image: {medium: image}, summary, id } = show;
 
   return (<Layout>
     <Head>
@@ -19,8 +19,10 @@ const ShowPage = ({show}) => {
 
     <div className="container">
       <h1>{name}</h1>
-      <img src={image.medium} />
+      <img src={image} />
       <div dangerouslySetInnerHTML={{__html: summary}}></div>
+
+      <button className="btn btn-success">Add to cart</button>
   </div>
   </Layout>)
   
