@@ -12,9 +12,12 @@
     "bootstrap": "^4.5.2",
     "moment": "^2.27.0",
     "next": "9.5.2",
+    "next-redux-wrapper": "^6.0.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-redux": "^7.2.1",
     "reactstrap": "^8.5.1",
+    "redux": "^4.0.5",
     "sass": "^1.26.10"
   }
 }
