@@ -5,6 +5,8 @@ const reducer = (state = {shoppingCart:[]}, action) => {
     switch (action.type) {
         case HYDRATE:
             return {...state, ...action.payload};
+        case 'ADD_TO_CART': 
+            return {...state, shoppingCart: [...state.shoppingCart, action.payload]}
         default:
             return state;
     }

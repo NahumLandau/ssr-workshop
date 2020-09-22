@@ -2,6 +2,7 @@ import Error from 'next/error';
 import Head from 'next/head';
 import Layout from "../../components/Layout";
 import { getTvShow } from '../../services/api'
+import { useDispatch } from 'react-redux';
 
 const ShowPage = ({show}) => {
   
@@ -10,6 +11,11 @@ const ShowPage = ({show}) => {
   }
   
   const { name, image: {medium: image}, summary, id } = show;
+  const dispatch = useDispatch();
+
+  const addToCart = () => {
+    dispatch({type: 'ADD_TO_CART', payload: {name, image, id}})
+  }
 
   return (<Layout>
     <Head>
@@ -22,7 +28,7 @@ const ShowPage = ({show}) => {
       <img src={image} />
       <div dangerouslySetInnerHTML={{__html: summary}}></div>
 
-      <button className="btn btn-success">Add to cart</button>
+      <button className="btn btn-success" onClick={addToCart}>Add to cart</button>
   </div>
   </Layout>)
   
